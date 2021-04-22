@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Estrutura base de HTML
+	</title>
+	<link rel="stylesheet" href="2-estilos/styles.css">
+</head>
+
+<body>
+
+	<!-- Menu principal -->
+	<nav class="main_menu">
+		<ul>
+			<li>
+				<a id="html_link" href="#">
+					HTML
+				</a>
+			</li>
+			<li>
+				<a id="css_link" href="#">
+					CSS
+				</a>
+			</li>
+			<li>
+				<a id="javascript_link" href="#">
+					Javascript
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Fim de menu principal -->
+
+	<!-- Menu lateral -->
+	<nav id="page_menu">
+		<ul>
+			<li>
+				<a href="#top">
+					Topo da página
+				</a>
+			</li>
+			<li>
+				<a href="#formatacao_geral">
+					Formatação geral
+				</a>
+				<ul class="page_sub_menu_1">
+					<li>
+						<a href="#br">
+							&lt;br&gt;
+						</a>
+					</li>
+					<li>
+						<a href="#hr">
+							&lt;hr&gt;
+						</a>
+					</li>
+					<li>
+						<a href="#indentacao">
+							Indentação
+						</a>
+					</li>
+					<li>
+						<a href="#comprimento">
+							Comprimento de linha
+						</a>
+					</li>
+					<li>
+						<a href="#escapamento">
+							Escapamento de carateres
+						</a>
+					</li>
+					<li>
+						<a href="#entidades">
+							Entidades
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#comments">
+					Comentários
+				</a>
+				<ul class="page_sub_menu_1">
+					<li>
+						<a href="#one_line_comments">
+							Comentários de uma linha
+						</a>
+					</li>
+					<li>
+						<a href="#multi_line_comments">
+							Comentários multilinha
+						</a>
+					</li>
+					<li>
+						<a href="#sensitive_information">
+							Informação sensível
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#suma">
+					Em suma
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Fim de menu lateral -->
+
+	<main>
+		<!-- Título -->
+		<div id="top" class="anchor"></div>
+		<h1 class="h1">
+			Formatação de conteúdo HTML
+		</h1>
+		<!-- Fim de título -->
+
+		<!-- Começo de introdução -->
+		<article class="article-main">
+			<p>
+				Apesar de o conteúdo de uma página html poder ser escrito de qualquer maneira
+				e com qualquer formatação para este funcionar, existem convenções seguidas por
+				quase todos os programadores para facilitar a cooperação entre os mesmos.
+			</p>
+			<p>
+				Embora o ideal seja estar a par das convenções usadas para a empresa para a
+				qual se trabalhe, esta página lista algumas das mais comuns para a morfologia
+				de código HTML. As próximas  página sirão focar-se na formatação dos elementos
+				em geral ou de um elemenento específico.
+		</article>
+		<!-- Fim de introdução -->
+
+		<!-- Começo de formatação geral -->
+		<article class="article-main">
+			<div id="formatacao_geral" class="anchor"></div>
+			<h2 class="h2">
+				Formatação geral
+			</h2>
+			<!-- Começo de <br> -->
+			<div id="br" class="anchor"></div>
+			<h3 class="h3">
+				&lt;br&gt;
+			</h3>
+			<p>
+				Quando se começa a aprender HTML e ainda não se conhece e/ou domina CSS, é
+				bastante comum fazer uso de &lt;br&gt; para criar espaçamento entre conteúdo
+				disposto na página.
+			</p>
+			<p>
+				Contudo, a função deste elemento é criar uma quebra de linha, para qualquer
+				situação em que se tenha uma linha comprida que se queira dividir, sem ter de 
+				criar um novo elemento &lt;p&gt;, que tem a sua própria formatação.
+			</p>
+			<p>
+				Como tal, espaçamento e distanciamento de elementos dispostos na página devem 
+				ser feitos com reccurso a CSS em vez de &lt;br&gt;.
+			</p>
+			<!-- Fim de <br> -->
+
+			<!-- Começo de <hr> -->
+			<div id="hr" class="anchor"></div>
+			<h3 class="h3">
+				&lt;hr&gt;
+			</h3>
+			<p>
+				O mesmo aplica-se a &lt;hr&gt; para criar divisórias. &lt;hr&gt; tem a semântica
+				de "fim de uma secção e começo de outra", semelhante a &lt;section&gt;
+				&lt;/section&gt;, que surgiu em HTML5.
+			</p>
+			<p>
+				Como o elemento &lt;section&gt; já indica isto intrinsicamente, &lt;hr&gt;, este
+				elemento é mais usado para criar quebras temáticas ou de tópicos.
+			</p>
+			<p>
+				Fazendo uma extensão a partir da informação anterior, pode-se dizer que 
+				&lt;hr&gt; é, em parte, um elemento semântico, assim como visual, que pode ser
+				usado em vez de	&lt;div&gt;&lt;/div&gt; para criar uma quebra visual, que pode 
+				também ser editada em CSS. Contudo, não é um susbtituto para margens, bordas e 
+				outras propriedades CSS.
+			</p>
+			<!-- Fim de <hr> -->
+
+			<!-- Começo de indentação -->
+			<div id="indentacao" class="anchor"></div>
+			<h3 class="h3">
+				Indentação
+			</h3>
+			<p>
+				Para ajudar na leitura de código HTML, é extremamente aconselhável o uso de
+				de indentação para ajudar a identificar os elementos criança e os elementos pai.
+				Isto não só facilita a leitura, como também facilita a identificação de 
+				elementos e quais herdam propriedades.
+			</p>
+			<!-- Começo de exemplo sem indentação -->
+			<div class="small_example_3">
+				<h4 class="example-header">
+					Exemplo sem indentação
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;body&gt;
+&lt;p&gt;
+Isto é um parágrafo
+&lt;ul&gt;
+&lt;li&gt;
+Item 1 da lista
+&lt;/li&gt;
+&lt;li&gt;
+Item 2 da lista
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;body&gt;
+					</pre>
+				</div>
+			</div>
+			<!-- Fim de exemplo sem indentação -->
+			<!-- Começo de exempo com indentação -->
+			<div class="small_example_3">
+				<h4 class="example-header">
+					Exemplo sem indentação
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;body&gt;
+  &lt;p&gt;
+    Isto é um parágrafo
+    &lt;ul&gt;
+      &lt;li&gt;
+        Item 1 da lista
+      &lt;/li&gt;
+      &lt;li&gt;
+        Item 2 da lista
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;p&gt;
+&lt;body&gt;
+					</pre>
+				</div>
+			</div>
+			<!-- Fim de exemplo com indentação -->
+			<p>
+				Como se pode ver nestes dois exemplos, o código é significaticamente mais fácil 
+				de ler quando está devidamente indentado.
+			</p>
+			<p>
+				Deve-se ainda ter em conta que há alguns elementos que não devem ser indentados,
+				que podem ser referidos como crianças diretas. Os elementos em questão são 
+				&lt;html&gt;, &lt;head&gt; e &lt;body&gt;.
+			</p>
+			<!-- Fim de indentação -->
+			
+			<!-- Começo de comprimento de linha -->
+			<div id="comprimento" class="anchor"></div>
+			<h3 class="h3">
+				Comprimento de linha
+			</h3>
+			<p>
+				Seja qual for o editor de texto ou IDE que se esteja a usar, no geral, estes não
+				têm as dimensões do ecrã para a quebra de linha, de modo que é aconselhável
+				fazer quebras manuais para manter o código e o texto facilmente legíveis.
+			</p>
+			<p>
+				A recomendação comummente encontrada é para limitar a 80 carateres. Pode-se
+				fazer o argumento, indubitavelmente válido, de que com as dimensões de ecrã cada 
+				vez maiores, assim como a opção de moldar o texto, as linhas podem ser mais 
+				compridas. Na minha opinião pessoal, manter o limite de 80 carateress ajuda nos
+				seguintes pontos:
+				<ul class="article-list">
+					<li>
+						Como a mancha textual é comparativamente mais pequena, pode ser mais fácil
+						não perder a linha que se está a ler e também ser mais fácil encontrar algum
+						segmento de texto.
+					</li>
+					<li>
+						É bastante comum, à medida que se vão adicionando elementos e até linguagens a 
+						uma página web, que hajam partes que tenham dezenas de carateres de indentação.
+						Manter o limite de 80 caracteres, além de ajudar colaboradores que possam estar
+						a usar ecrãs de menores dimensões, favorece também as pessoas que tenham ecrãs
+						maiores quando eventualmente se tenham 8 a 10 elementos cirança para cima.
+					</li>
+				</ul>
+			</p>
+			<p>
+				Existem algumas exceções a esta regra, contudo:
+				<ul class="article-list">
+					<li>
+						No elemento head, a informação para a tag &lt;meta&gt; tem de estar toda numa
+						linha.
+					</li>
+					<li>
+						URLs não podem ser divididas. Se uma URL for demasiado grande, pode-se optar por
+						a colocar noutra linha, junto com o atributo href, claro.
+					</li>
+					<li>
+						Embora esta seja uma guia geral que possa ser bastante útil, não vale a pena 
+						implementá-la ao ponto que o significado do código é alterado. Infelizmente, 
+						nem sempre dá para evitar linhas longas.
+					</li>
+				</ul>
+			</p>
+			<!-- Fim de comprimento de linha -->
+
+			<!-- Começo de escapamento de carateres -->
+			<div id="escapamento" class="anchor"></div>
+			<h3 class="h3">
+				Escapamento de carateres (caracter escape)
+			</h3>
+			<p>
+				Há símbolos que são usados para a marcação de texto HTMl, que se escritos 
+				normalmente, podem ser confundidos como parte da marcação e levar a 
+				resultados indesejados. Estes carateres são  no geral &lt;, &gt;, &amp;, &quot;
+				e &apos;.
+			</p>
+			<p>
+				Para se fazer o escapamento destes carateres de modo a que sejam renderizados
+				corretamente, deve-se fazer uso das entidades de carateres que se podem
+				encontrar facilmente na web. Como referência rápida, as entidades destes 
+				carateres são &amp;lt;, &amp;gt;, &amp;amp;, &quot;quot; e &amp;apos;.
+			</p>
+			<!-- Fim de escapamento de carateres -->
+			
+			<!-- Começo de entidades -->
+			<div id="entidades" class="anchor"></div>
+			<h3 class="h3">
+				Entidades
+			</h3>
+			<p>
+				Ao escrever entidades de carateres em HTML, tendo em conta que normalmente se
+				faz uso de UTF-8 para a codificação de carateres, estes podem ser escritos
+				diretamente com o respetivo atalho de teclado (por exemplo, ©, € em vez de
+				&amp;copy;, &amp;euro;). Nao só o texto que se inclui no código fica mais claro 
+				como se usam menos carateres. Em adição, só é precio ter em conta as entidades
+				para os carateres de marcação html.
+			</p>
+			<!-- Fim de entidades -->
+		</article>
+		<!-- Fim de formatação geral-->
+
+		<!-- Começo de comentários -->
+		<article class="article-main">
+			<div id="comments" class="anchor"></div>
+			<h2 class="h2">
+				Comentários
+			</h2>
+			<p>
+				O uso de comentários é essencial, seja para quando se trabalha em equipa e se
+				querem colocar observações para guiar os outros membros do grupo, ajudar a
+				dividir a estrutura do documento e/ou deixar lembretes para quando se retornar
+				ao ficheiro em questão noutra altura.
+			</p>
+			<!-- Começo de comentário de uma linha -->
+			<div id="one_line_comments" class="anchor"></div>
+			<h3 class="h3">
+				Comentários de uma linha
+			</h3>
+			<p>
+				Quando os comentários são apenas uma linha, tanto as tags como o comentário
+				devem estar na mesma linha:
+			</p>
+			<!-- Começo de exemplo de comentário de uma linha errado 1 -->
+			<div class="small_example_3">
+				<h4 class="example-header">
+					Comentário de uma linha errado 1
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;!--
+Comentário
+--&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este comentário está errado porque &lt;!--, Comentário e --&gt; deviam estar na
+					mesma linha.
+				</p>
+			</div>
+			<!-- Fim de exemplo de comentário de uma linha errado 1-->
+			<p>
+				Estes comentários, dentro das tags de abertura e fecho devem ser rodeados por
+				espaços. Além de ajudar com a leitura dos comentários, isto deve-se ao facto de
+				alguns caracteres não poderem ser usados diretamente a seguir ou antes das tags
+				de comentário:
+			</p>
+			<!-- Começo de exmplo de comentário de uma linha errado 2 -->
+			<div class="small_example_3">
+				<h4 class="example-header">
+					Comentário de uma linha errado 2
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;!--Comentário--&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este comentário está errado porque não há espaçamento entre as tags do
+					comentário e o comentário em si,
+				</p>
+			</div>
+			<!-- Fim de exemplo de comentário de uma linha errado 2-->
+			<!-- Começo de exemplo de comentário de uma linha correto -->
+			<div class="small_example_3">
+				<h4 class="example-header">
+					Comentário de uma linha correto
+				</h4>
+					<div class="small-example-content">
+						<pre>
+&lt;!-- Comentário --&gt;
+						</pre>
+					</div>
+			</div>
+			<!-- Fim de exemplo de comentário de uma linha correto -->
+			<!-- Fim de comentários de uma linha -->
+
+			<!-- Começo de comentários multilinha -->
+			<div id="multi_line_comments" class="anchor"></div>
+			<h3 class="h3">
+				Comentários multilinha
+			</h3>
+			<p>
+				As tags de comentários multilinha devem estar nas suas próprias linhas:
+			</p>
+			<!-- Começo de mau exemplo multilinha 1-->
+			<div class="small_example_3">
+				<h4 class="example-header">
+					Mau exemplo de comentário multilinha 1
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;!-- Isto é um comentário multilinha
+    Que se estende por várias linhas
+--&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo está errado porque a tag de abertura e o começo do comentário estão
+					na mesma linha.
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de comentário multilinha 1-->
+			<p>
+				O comentário não deve estar indentado:
+			</p>
+			<!-- Começo de mau exemplo de comentário multilinha 2-->
+			<div class="small_example_3">
+				<h4 class="example-header">
+					Mau exemplo de comentário multilinha 2
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;!--
+  Isto é outro
+	grande comentário
+--&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo está errado porque o comentário está indentado.
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de comentário multilinha 2 -->
+			<!-- Começo de bom exemplo de comentário multilinha -->
+				<div class="small_example_3">
+					<h4 class="example-header">
+						Bom exemplo de comentário multilinha
+					</h4>
+					<div class="small-example-content">
+						<pre>
+&lt;!--
+Mais outro comentário
+que se estende por várias linhas
+--&gt;
+						</pre>
+					</div>
+				</div>
+			<!-- Fim de mau exemplo de comentário multilinha -->
+			<!-- Fim de comentários multilinha -->
+
+			<!-- Começo de informação sensível -->
+			<div id="sensitive_information" class="anchor"></div>
+			<h3 class="h3">
+					Informação sensível
+			</h3>
+			<p>
+				Tendo em conta que qualquer pessoa pode inspecionar o elemento de página, e 
+				através daí, ter acesso ao código da página e os comentários da mesma, não se 
+				deve incluir informação sensível nestes.
+				<br />
+				Este tipo de informação pode ser usada por possíveis atacantes para mapear a 
+				estrutura e os ficheiros da aplicação, expôr partes ocultas do website como por
+				exemplo o backend, entre outras ações maliciosas.
+			</p>
+			<!-- Começo de mau exemplo de comentário com informação sensível -->
+			<div class="small_example_3">
+				<h4 class="example-header">
+					Exemplo de comentário com informação sensível
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;!--
+O input dos campos deste formulário é enviado para 
+a página processamento.html antes de ser transferida 
+para a base de dados.
+--&gt;
+					</pre>
+				</div>
+			</div>
+				<!-- Fim de mau exemplo de comentário com informação sensível -->
+			<!-- Fim de informação sensível -->
+		</article>
+		<!-- Fim de comentários -->
+
+		<!-- Começo de em suma -->
+		<article class="article-main">
+			<div id="suma" class="anchor"></div>
+			<h2 class="h2">
+				Em suma
+			</h2>
+			<p>
+				Uma boa formatação de um documento HTML começa com a formatação do conteúdo 
+				geral antes de nos focarmos nos elementos e, posteriormente, elementos 
+				específicos.
+			</p>
+			<p>
+				Como tal, aqui foram abordados:
+			</p>
+			<ul class="summary_list">
+				<li>
+					Funções e usos apropriados de &lt;br&gt; e &lt;hr&gt;
+				</li>
+				<li>
+					Tamanho de indentação e elementos não afetados
+				</li>
+				<li>
+					Comprimento ideal das linhas
+				</li>
+				<li>
+					Conceito e referências para escapamento de carateres
+				</li>
+				<li>
+					Conceito de entidades HTML
+				</li>
+				<li>
+					Considerações gerais para os comentários de uma linha, multilinha e o tipo
+					de informação que pode ser incluída nestes.
+				</li>
+			</ul>
+		</article>
+		<!-- Fim de em suma -->
+
+
+		<!--80caracteresguidelinessssssssssssssssssssssssssssssssssssssssssssssssssss-->
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+
+/*
+--------------------
+|| Elementos HTML ||
+--------------------
+*/
+
+body {
+	min-height: 100%; 
+	font-size: 2.5vh;
+	margin: 0%;
+}
+
+main {
+	padding: 1% 2% 1% 0%;
+	left: 0;
+}
+
+.h4 {
+	width: 55%;
+	height: auto;
+	border: 1px solid white;
+	background-color: #bAA1A7;
+	text-align: center;
+	align-items: center;
+	padding: 1%;
+	margin: 3.5vh auto 2vh auto;
+}
+
+
+/*
+---------------------
+| Conteúdo da página|
+---------------------
+*/
+
+
+#try_it_editor {
+	text-align: center;
+}
+
+.content {
+	display: flex; /* Automatically puts everything in a row */
+	align-items: center;
+	justify-content: space-around; /* Evenly dividide the excess space around the elements within this parent */
+}
+
+input[type=button] {
+	border-radius: 5px;
+	background: #bAA1A7;
+	border: none;
+	width: 4vh;
+	height: 4vh;
+	align-content: center;
+}
+
+input[type=button]:hover {
+	background: #DBABBE;
+	border: 2px solid #797b84;
+}
+
+.box {
+	width: 40%;
+	border: 5px solid #bAA1A7;
+	border-radius: 10px;
+	height: 70vh;
+	text-align: left;
+	resize: none; /* eliminates the option of resizing the text area */
+	background-color: white;
+	padding: 1%;
+}
+
+
+
+

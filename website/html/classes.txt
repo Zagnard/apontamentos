@@ -1,0 +1,39 @@
+Cabeçalhos principais
+- class="h1" a class="h6"
+
+Menu lateral
+- class="page_sub_menu_1" para caraterizar o primeiro nível de sub-menu lateral.
+
+Conteúdo de artigos
+- class="article-list" 
+	- Listas incluídas dentro dos artigos.
+
+Exemplos: geral
+class="example-header"
+	- Configura o cabeçalho <h4> de um exemplo.
+class="example-paragraph"
+	- Configura o texto em parágrafo colocado fora de <class="big/small-example-content">
+
+Exemplos: pequenos
+- class="small-example-1"
+	- Exemplo pequeno do lado esquerdo da página. NOrmalmente usado em conjunto com small-example-2
+- class="small-example-2"
+	- Exemplo pequeno do lado direito da página. Normalmente usado em conjunto com small-example-1
+- class="small_example_3"
+	- Exemplo pequeno centrado ao meio da página. Normalmente usado sozinho
+- class="small-example-content"
+	- Configura o conteúdo de um exemplo pequeno.
+- class="small_example_image"
+	- Configura a imagem a ser apresentada num exemplo pequeno.
+
+Exemplos: grandes
+- class="big_example"
+	- Exemplo grande centrado ao meio da página. Normalmente usado sozinho.
+- class="big_example_content"
+	- Configura o conteúdo de um exemplo grande
+
+Em suma
+- class="summary_p"
+	- Configura o parágrafo do sumário da página
+- class="summary_list"
+	- Configura a lista <ul> do sumário da página

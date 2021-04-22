@@ -1,0 +1,218 @@
+/*
+------------------
+| Elementos HTML |
+------------------
+*/
+
+body {
+	min-height: 100%; 
+	/* 
+			Determina que a altura do corpo é sempre pelo menos 100%.
+			Isto é para evitar situações em que a página não tenha conteúdo suficiente para cupar a altura toda do ecrã,
+		deixando ainda espaço para ser maior quando necessário.
+	*/
+	font-size: 2.5vh;
+	/*
+			Tamanho da letra que aparece em todo o documento se não houver outra indicação.
+		vh e vw são unidades de medida que tomam em conta a largura do ecrã. 1vh = 1% da altura do ecrã e 1vw = 1% da 
+		largura do ecrã.
+	*/
+	margin: 0%;
+	/*
+			A margem do documento.
+			Margem consiste na distância que esse elemento tem entre si e outros elementos.
+			A maioria dos elementos HTML têm margens (e paddings) específicos. Neste caso, a margem original do body estava
+		a impedir o menu principal de ocupar toda a largura da página.
+	*/
+}
+
+h1 {
+	width: 100%; 
+	/* 
+			Largura do elemento.
+			As medidas em percentagem têm como ponto de referência o elemento pai.
+	*/
+	height: auto; /* O elemento ocupa automaticamente apenas a altura necessária */
+	border: 1px solid #FFFFFF;
+	/*
+			Cria uma borda à volta do elemento.
+			Os parâmetros são: tamanho da borda (1px), tipo de traço (solid) e a cor da borda (#FFFFFF).
+	*/
+	text-align: center; /* Alinha o texto ao centro */
+	background-color: #bAA1A7; /* Define a cor de fundo */
+	margin: 0%;
+	padding: 1%;
+	/* 
+			Padding funciona de um modo bastante semelhante à margem. COntudo, em vez de determinar o espaço à sua volta, 
+		determina o espaço entre si e o seu conteúdo.
+	*/
+}
+
+h2 {
+	width: 83.5%;
+	height: auto;
+	border: 1px solid white;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+}
+
+h3 {
+	width: 77%;
+	height: auto;
+	border: 1px solid white;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+}
+
+h4 {
+	width: 55%;
+	height: auto;
+	border: 1px solid white;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+}
+
+h5 {
+	width: 39.5%;
+	height: auto;
+	border: 1px solid #797b84;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+}
+
+h6 {
+	width: 33%;
+	height: auto;
+	border: 1px solid #797b84;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+}
+
+p {
+	width: 100%;
+	height: auto;
+	margin: 0%;
+	padding: 0% 1% 1% 0%;
+	text-indent: 4vh;
+}
+
+iframe {
+	width: 100%;
+	height: 50vh;
+	border: 5px solid purple;
+	margin: 1% 0% 0% 0%;
+}
+
+
+/*
+-------------
+| Main menu |
+-------------
+*/
+
+/* Main menu */
+#main_menu {
+	position: fixed; /* O elemento fica onde está, mesmo depois de se fazer scroll */
+	top: 0; /* Com position: fixed; 0 faz com que o elemento esteja no topo do elemento pai. */
+	width: 100%; 
+	/* 
+			Por predefinição, o elemento nav tem uma largura de 100%. 
+			Contudo, como a posição é fixed, tem de se indicar a largura em questão
+	*/
+	height: 5%;
+	padding: 0.4% 1% 1.8% 1%;
+	background-color: #EDD2E0;
+}
+
+#main_menu > ul {
+	padding: 0% 0% 0% 0%;
+	vertical-align: center;
+}
+#main_menu > ul > li {
+	display: inline; /* Faz com que os elemntos da lista (<li>) apareçam horizontalmente em vez de verticalmente */
+}
+
+#main_menu > ul > li > a {
+	padding: 1% 1% 1% 1%;
+	text-decoration: none; /* Elimina elementos decorativos que o texto tenha, neste caso, o sublinhado */
+	font-size: 12pt;
+	color: #797b84; /* Propriedade usada para determinar a cor do texto */
+}
+
+/* Change link color on hover */
+#main_menu > ul > li > a:hover {
+	color: #DBABBE;
+}
+
+
+/*
+-------------
+| Side menu |
+-------------
+*/
+
+#page_menu {
+	margin: 6% 0px 0px 0px;
+	min-height: auto;
+	max-height: 80%; /* Altura máxima que o elemento pode ter. Aparece barra de scroll se houver overflow */
+	width: 200px; 
+	position: fixed; 
+	top: 0; 
+	left: 0; /* Mesmo que top, mas para a esquerda */
+	background-color: #EDD2E0; 
+	overflow-x: hidden; /* Elimina a barra de scroll horizontal */
+	overflow-y: show; /* Mostra a barra de scroll vertical (quando necessário) */
+}
+
+#page_menu > ul {
+	list-style-type: none; /* Esta propriedade determina a "bullet" que os elementos da lista têm */
+	margin-left: -10%;
+}
+
+/* Navigation menu links */
+#page_menu > ul > li > a{
+	padding: 1% 2% 3% 2%;
+	text-decoration: none;
+	font-size: 12pt;
+	display: block;
+	/*
+			Os elementos com display:block ocupam por omissão toda a largura disponível e é feita uma quebra antes e depois dos elementos.
+			Elementos com display:inline-block e display:inline são dispostos em linha, mas apenas os com 
+		display:inline-block podem ter uma largura e uma altura - significa que se pode usar um elemento de bloco 
+		embutido como um bloco enquanto o flui dentro de texto ou outros elementos.
+			Diferença de estilos suportados como resumo:
+			- inline: somente margin-left, margin-right, padding-left,padding-right
+			- inline-block e block: margin, padding, height,width
+	*/
+	color: #797b84;
+}
+
+#page_menu > ul >li > a:hover {
+	color: #DBABBE;
+}
+
+/*
+---------------------
+| Conteúdo da página|
+---------------------
+*/
+
+/* Zona de conteúdo no geral */
+main {
+	margin: 5% 0% 0% 15%;
+	padding: 1% 2% 1% 2%;
+	left: 0;
+}
+
+/* Blocos do conteúdo */
+article {
+	width: auto;
+	height: auto;
+	padding: 2% 4% 2% 2%;
+	margin: 2% -2% 0% 0%;
+}

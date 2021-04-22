@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang=pt>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" width="device-width, initial-scale=1.0">
+	<title>
+		Convenções - Nomeação de ficheiros
+	</title>
+	<link rel="stylesheet" href="2-estilos/styles.css">
+</head>
+
+<body>
+
+	<!-- Menu principal -->
+	<nav class="main_menu">
+		<ul>
+			<li>
+				<a id="html_link" href="#">
+					HTML
+				</a>
+			</li>
+			<li>
+				<a id="css_link" href="#">
+					CSS
+				</a>
+			</li>
+			<li>
+				<a id="javascript_link" href="#">
+					Javascript
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Fim de menu principal -->
+
+	<!-- Menu lateral -->
+	<nav id="page_menu">
+		<ul>
+			<li>
+				<a href="#top">
+					Topo da página
+				</a>
+			</li>
+			<li>
+				<a href="#caracters">
+					Carateres usados
+				</a>
+			</li>
+			<li>
+				<ul class="page_sub_menu_1">
+					<li>
+						<a href="#capitalization">
+							Letras maiúsculas ou minúsculas?
+						</a>
+					</li>
+					<li>
+						<a href="#spacing">
+							Espaços, traços ou underscores?
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#naming">
+					Escolher um bom nome
+				</a>
+			</li>
+			<li>
+				<ul class="page_sub_menu_1">
+					<li>
+						<a href="#general">
+							Ficheiros em geral
+						</a>
+					</li>
+					<li>
+						<a href="#main">
+							Nome da página principal
+						</a>
+					</li>
+					<li>
+						<a href="#extension">
+							Extensão do ficheiro
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#suma">
+					Em suma
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Fim do Menu lateral -->
+
+	<main>
+		<!-- Título -->
+		<h1 class="h1">
+			<nav id="top" class="anchor"></nav>
+			Nomeação de ficheiros
+		</h1>
+		<!-- Fim de título -->
+
+		<!-- Introdução -->
+		<article class="article-main">
+			<p>
+				Seja fácil ou difícil de crer, boa escrita HTML, assim como codificação em outras linguagens, começa com uma
+				denominação apropriada segundo regras básicas, assim como intuititiva. Os nomes dos ficheiros são parte da URL
+				do site, de modo que a importância destes não deve ser descurada.
+			</p>
+			<p>
+				Em adição, apesar de alguns dos pontos explicados nesta página serem exclusivos a HTML e possivelmente XHTML, a
+				maioria são aplicáveis para qualquer linguagem, seja esta de markup ou programação.
+			</p>
+		</article>
+		<!-- Fim de introdução -->
+
+		<!-- Carateres usados -->
+		<article class="article-main">
+			<h2 class="h2">
+				<div class="" id=""></div>
+				Carateres usados
+			</h2>
+			<p>
+				O ideal é nomear os diferentes ficheiros com carateres alfanuméricos (números e letras) e traços (-) ou
+				underscores (_), embora este último seja preterido.
+			</p>
+			<p>
+				Existem vários carateres que não devem ser usados quando a nomear documentos html, incluindo elementos
+				semânticos de html e outras linguagens (como por exemplo os sinais de menor (&lt;) e maior (&gt;) para HTML,
+				onde respetivamente representama abertura e o fecho de uma tag) ou
+				de outras linguagens, carateres que não são devidamente processados por servidores web e até mesmo carateres que
+				afetam a pontuação do site pelos motores de busca.
+			</p>
+			<p>
+				Vamos analisar e explicitar estes diferentes pontos individualmente.
+			</p>
+
+			<!-- Letras maiúsculas ou minúsculas? -->
+			<h3 class="h3">
+				<div class="" id=""></div>
+				Letras maiúsculas ou minúsculas?
+			</h3>
+			<p>
+				É altamente aconselhável usar apenas letras minúsculas para nomes dos ficheiros.
+			</p>
+			<p>
+				Um primeiro ponto a ter em conta é o facto de ser relativamente mais fácil (menos probabilidade de erro, menos
+				teclas premidas, etc). Isto reduz também a probabilidade de erro quando a fazer alguma ligação e o link não
+				funcionar.
+			</p>
+			<p>
+				Um outro ponto a que se deve prestar atenção é maximizar a compatibilidade entre diferentes sistemas e
+				servidores.
+				Enquanto um sistema microsoft não distingue entre uma letra maiúscula e minúscula, um sistema linux faz esta
+				distinção, devido a organizar os seus ficheiros com base no código do caracter, que naturalmente, é diferente
+				entre letras minúsculas e maiúsculas.
+			</p>
+			<p>
+				Vários servidores web são programados em linux, e quando a transferir ficheiros de um desses servidores para
+				microsoft, se houver ficheiros com o mesmo nome, mas capitalização diferente para distinção no servidor, o
+				windows irá substituir um desses ficheiros por não fazer distinção baseada na capitalização. Há também
+				servidores programados em outras linguagens (ex: Apache), que não suportam capitalizações.
+			</p>
+			<p>
+				Como tal, para pessoas que estão habituadas a linguagens de programação, fazer uso de camelCase (palavras
+				juntas, mas com a letra capitalizada a partir da segunda ex: thisIsACoolWebsite) não é aconselhado.
+			</p>
+
+			<!-- Exemplo de capitalização 1 -->
+			<div class="small-example-1">
+				<h4 class="example_content">
+					Mau exemplo
+				</h4>
+				<div class="small-example-content">
+					<span>
+						SesquiPedalioFobia.html
+					</span>
+				</div>
+			</div>
+			<!-- Fim de exemplo de capitalização 1 -->
+			<!-- Exemplo de capitalização 2 -->
+			<div class="small-example-2">
+				<h4 class="example_content">
+					Bom exemplo
+				</h4>
+				<div class="small-example-content">
+					<span>
+						sesquipedaliofobia.html
+					</span>
+				</div>
+			</div>
+			<!-- Exemplo de capitalização 2 -->
+			<!-- FIm de letras maiúsculas ou minúsculas? -->
+
+			<!-- Espaços, traços ou underscores? -->
+			<h3 class="h3">
+				<div class="" id=""></div>
+				Espaços, traços ou underscores?
+			</h3>
+			<!-- Explicação de espaços -->
+			<p>
+				Nós estamos habituados a separar as palavras com espaços. Infelizmente, em termos de programação, isto levanta
+				alguns problemas.
+			</p>
+			<p>
+				No geral, em linguagens de programação e de markup, o espaço indica o fim de um conjunto de carateres
+				(<i>string</i>), de modo que quando incluímos links que têm espaços no nome, estes podem ser mal interpretados e
+				gerar problemas.
+			</p>
+			<p>
+				O nome do ficheiro faz também parte da URL, mas o servidor tem tendência a codificar o espaço com %20, gerando
+				uma
+				URL menos apelativa. Como as pessoas podem consultar a URL por pistas para os conteúdos da página, isto pode
+				reduzir confiança no website.
+			</p>
+			<p>
+				A outra desvantagem de usar espaços nos nomes dos ficheiros pode levar a que estes sejam corrompidos quando
+				são gravados, reencaminhados ou ligados a, através de uma hiperligação.
+			</p>
+			<!-- Fim de explicação de espaços -->
+
+			<!-- Exemplo de espaço 1-1 -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Nome com espaço
+				</h4>
+				<div class="small-example-content">
+					<span>
+						0 teste 1
+					</span>
+				</div>
+			</div>
+			<!-- Exemplo de espaço 1-1 -->
+			<!-- Exemplo de espaço 2-1 -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Nome com traço em vez de espaço
+				</h4>
+				<div class="small-example-content">
+					<span>
+						0-teste-1
+					</span>
+				</div>
+			</div>
+			<!-- Exemplo de espaço 2-1 -->
+			<!-- Exemplo de espaço 1-2 -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Resultado na URL
+				</h4>
+				<div class="small-example-content">
+					<a href="4-exemplos/ex-1-convencoes-nomes-de-ficheiros-bad-url-space-encode.PNG" target="_blank">
+						<img class="small_example_image"
+							src="4-exemplos/ex-1-convencoes-nomes-de-ficheiros-bad-url-space-encode.PNG"
+							alt="Espaço codificado na url">
+					</a>
+				</div>
+			</div>
+			<!-- Exemplo de espaço 1-2 -->
+			<!-- Exemplo de espaço 2-2 -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Resultado na url
+				</h4>
+				<div class="small-example-content">
+					<a href="4-exemplos/ex-2-convencoes-nomes-de-ficheiros-good-url-space-encode.PNG" target="_blank">
+						<img class="small_example_image"
+							src="4-exemplos/ex-2-convencoes-nomes-de-ficheiros-good-url-space-encode.PNG"
+							alt="Nome com traços e não codificado na URL">
+					</a>
+				</div>
+			</div>
+			<!-- Exemplo de espaço 2-2 -->
+			<!-- Fim de explicação de espaços -->
+
+			<!-- Explicação de underscores -->
+			<p>
+				Assim sendo, as opções que nos restam são usar traços ou underscores.
+			</p>
+			<p>
+				Underscores, contudo, têm algumas desvantages. Uma delas é o facto de não poderem, ou dificilmente poderem ser
+				vistos em hiperligações que não tenham o sublinhado omitido, em comparação com traços.
+			</p>
+
+			<!-- Exemplo de link underscore 1-1 -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Nome com underscores
+				</h4>
+				<div class="small-example-content">
+					<span>
+						0_teste_1
+					</span>
+				</div>
+			</div>
+			<!-- Fim de exemplo de link underscore 1-1 -->
+			<!-- Exemplo de link underscore 2-1 -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Nome com traços
+				</h4>
+				<div class="small-example-content">
+					<span>
+						0-teste-1
+					</span>
+				</div>
+			</div>
+			<!-- Fim de exemplo de link underscore 2-1 -->
+			<!-- Exemplo de link underscore 1-2 -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Resultado numa URL publicada
+				</h4>
+				<div class="small-example-content">
+					<a href="4-exemplos/ex-3-convencoes-nomes-de-ficheiros-bad-url-link-underscore.PNG" target="_blank">
+						<img class="small_example_image"
+							src="4-exemplos/ex-3-convencoes-nomes-de-ficheiros-bad-url-link-underscore.PNG"
+							alt="Underscores invisíveis numa URL publicada">
+					</a>
+				</div>
+			</div>
+			<!-- Fim de exemplo de link underscore 1-2 -->
+			<!-- Exemplo de link underscore 2-2 -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Resultado numa url publicada
+				</h4>
+				<div class="small-example-content">
+					<a href="4-exemplos/ex-4-convencoes-nomes-de-ficheiros-good-url-link-underscore.PNG" target="_blank">
+						<img class="small_example_image"
+							src="4-exemplos/ex-4-convencoes-nomes-de-ficheiros-good-url-link-underscore.PNG"
+							alt="Traços visíveis numa URL publicada">
+					</a>
+				</div>
+			</div>
+			<!-- Fim de exemplo de link underscore 2-2 -->
+
+			<p>
+				Outra desvantagem, é quando se tem o site na internet e se espera que hajam utilizadores que a encontrem através
+				de um motor de busca.
+			</p>
+			<p>
+				Para um motor de busca, um traço tem a conotação de espaçamento, de modo que aqui-falamos-de-animais continua a
+				ser aqui-falamos-de-animais. Contudo, o underscore tem uma conotação de concatenação (palavra cara para "junção"
+				ou "ligação"), de modo que aqui_falamo_de_animais passa a ser aquifalamosdeanimais.
+			</p>
+			<p>
+				Tendo em conta que a URL de um website inclui o nome do ficheiro html ou aberto, normalmente no fim, o motor de
+				busca eventualmente irá ler essa parte da URL. Se tiver traços, consegue fazer distinção entre as diferentes
+				palavras e já anota algumas palavras chave desse website e dessa página. Se tiver underscores, tem-se
+				essencialmente uma amalgamação de palavras sem sentido para o motor de busca e de difícil leitura para
+				utilizadores.
+			</p>
+			<p>
+				Como tal, pode-se concluir que o melhor carater para separar palavras quando a nomear ficheiros html, e vários
+				outros, é o traço.
+			</p>
+			<!-- Fim de explicação de underscores -->
+		</article>
+		<!-- Fim de carateres usados -->
+
+
+		<!-- Escolha de nome e extensão -->
+		<article class="article-main">
+			<!-- Escolha de nome -->
+			<h2 class="h2">
+				<div class="" id=""></div>
+				Escolher um bom nome
+			</h2>
+			<p>
+				Agora que entendemos que carateres podemos ou não usar quando a nomear um ficheiro html, há que ter algumas
+				considerações relativamente à constituição dos nomes.
+			</p>
+			<h3 class="h3">
+				<div class="" id=""></div>
+				Ficheiros em geral
+			</h3>
+			<p>
+				Isto aplica-se à designação de qualquer ficheiro que façamos uso em programação: o nome deve ser descritivo do
+				conteúdo, em vez de uma linha de carateres aparetenemten aleatórios e idealmente não deve ser demasiado
+				comprido, para ser visto por completo no <i>hover</i> da hiperligação e para ser mais fácil de recordar (devo
+				admitir que falho redondamente neste ponto).
+			</p>
+			<p>
+				É também aconselhável não começar o nome do ficheiro com um número, uma vez que números como primeiro carater de
+				uma <i>string</i> tem uma contoção específica em algumas linguagens e/ou programas que podem ser usados para
+				interagir com a página em questão, levando a resultados indesejados.
+			</p>
+			<!-- Fim de escolha de nome -->
+
+			<!-- Nome principal -->
+			<h3 class="h3">
+				<div class="" id=""></div>
+				Nome da página principal
+			</h3>
+			<p>
+				Independentemente do nome do website, há que ter em conta que já existe um nome definido para a página princpal
+				num servidor web, sendo este "index".
+			</p>
+			<p>
+				Quando um servidor web tenta abrir um website, precisa de escolher uma das páginas do website para abrir de
+				entre das várias que estão na pasta do website. Como tal, o servidor web começa com nomedowebsite.pt/ , mas
+				depois adiciona automaticamente o nome padrão usado para a página principal, sendo este index. Assim, embora a
+				ligação nos apareça algo do tipo www.nomedowebsite.pt/ , a página aberta é www.nomedowebsite.pt/index.
+			</p>
+			<p>
+				Este não é o método ideal, e só funciona quando se tem o site num servidor, mas pode-se usar este padrão como
+				uma pequena medida de proteção. Como o servidor procura logo a página index como a página a ser aberta, pode-se
+				criar uma página index, mesmo sem conteúdo, dentro de cada uma das subpastas principais. Quando algum possível
+				cracker tente aceder a essa pasta através da URL, para ver a estrutura da pasta, será automaticamente
+				redirecionado para a página index lá presente, mantendo os conteúdos da página ocultos. Tem-se abaixo um exemplo
+				do resultado de NÃO ter uma página index na pasta que uso para os exemplos deste website.
+			</p>
+			<p>
+				Repito que este não é o melhor método para evitar esta ação contudo, sendo o ideal configurar o
+				ficheiro.htaccess do servidor para desativar a listagem de diretórios quando o alvo da URL é um diretório em vez
+				de um ficheiro.
+			</p>
+
+			<!-- Exemplo de ocultação de conteúdos com a página index -->
+			<div class="big_example">
+				<h4 class="example-header">
+					Pasta com ficheiro index
+				</h4>
+				<div class="big_example_content">
+					<a href="4-exemplos/ex-5-convencoes-nomes-de-ficheiros-no-index-protection.PNG" target="_blank">
+						<img class="big_example_image" src="4-exemplos/ex-5-convencoes-nomes-de-ficheiros-no-index-protection.PNG"
+							alt="Ficheiros listados sem página de index">
+					</a>
+				</div>
+			</div>
+			<!-- Fim de exemplo de ocultação de conteúdos com a página index -->
+			<!-- Fim de nome principal -->
+
+			<!-- Extensão de ficheiro -->
+			<h3 class="h3">
+				<div class="" id=""></div>
+				Extensão do ficheiro
+			</h3>
+			<p>
+				Finalmente agora que já se sabem os carateres permitidos no nome de um ficheiro html e como escolher um bom
+				nome, deixo uma consideração final relativamente à extensão do mesmo.
+			</p>
+			<p>
+				A extensão de um ficheiro consiste na parte do nome do ficheiro que está a seguir ao ponto. Essa parte determina
+				o tipo de ficheiro que é, e como este deve iniciar. Caso não consiga ver essa parte do nome, isso pode ser
+				ativado nas opções do sistema operativo (windows, mac, etc).
+			</p>
+			<p>
+				No caso de ficheiros html, estes devem terminar com a extensão .htm ou html, sendo ambas equivalentes uma à
+				outra, mas é aconselhável usar apenas uma para evitar confusões. Quando se estiver a trabalhar com uma equipa, é
+				aconselhável definir não só esta extensão, mas também a estrutura dos nomes dos ficheiros e das pastas, assim
+				como a estrutura das pastas em si.
+			</p>
+			<p>
+				Para outros ficheiros comumente usados em desenvolvimento web: os ficheiros css têm extensão .css, os javascript
+				em .js e os ficheiros de imagem têm normalmente como extensão .png e/ou .jpg.
+			</p>
+			<!-- Fim de extensão de ficheiro -->
+		</article>
+		<!-- Fim de escolha de nome e extensão -->
+
+		<!-- Em suma -->
+		<article class="article-main">
+			<h2 class="h2">
+				<div class="" id=""></div>
+				Em suma
+			</h2>
+			<p class="summary_p">
+				Uma boa nomeação não serve meramente para nos ajudar a identificar ficheiros, mas também a termos uma boa
+				organização e menos probabilidade de erro tanto por nós, como pelos diferentes programas que usamos. Em suma
+				deve-se:
+			</p>
+			<ul class="summary_list">
+				<li>
+					Escrever apenas em letras minúsculas e números, a começar o nome com uma letra e a usar traços para espaços;
+				</li>
+				<li>
+					Criar nomes relativamente curtos, mas explicativos;
+				</li>
+				<li>
+					Nomear a página principal index.htm ou index.html;
+				</li>
+			</ul>
+		</article>
+		<!-- Fim de em suma -->
+	</main>
+
+</body>
+
+</html>

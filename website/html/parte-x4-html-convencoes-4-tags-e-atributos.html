@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Formatação de tags e elementos
+	</title>
+	<link rel="stylesheet" href="2-estilos/styles.css"> 
+</head>
+
+<body>
+	<!-- Menu principal -->
+	<nav class="main_menu">
+		<ul>
+			<li>
+				<a id="html_link" href="#">
+					HTML
+				</a>
+			</li>
+			<li>
+				<a id="css_link" href="#">
+					CSS
+				</a>
+			</li>
+			<li>
+				<a id="javascript_link" href="#">
+					Javascript
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Fim de menu principal -->
+
+	<!-- Menu lateral -->
+	<nav id="page_menu">
+		<ul>
+			<li>
+				<a href="#top">
+					Topo da página
+				</a>
+			</li>
+			<li>
+				<a href="#tags">
+					Tags e elementos
+				</a>
+				<ul class="page_sub_menu_1">
+					<li>
+						<a href="#tags-cap">
+							Capitalização
+						</a>
+					</li>
+					<li>
+						<a href="#spacing">
+							Espaçamento
+						</a>
+					</li>
+					<li>
+						<a href="#empty">
+							Elementos vazios
+						</a>
+					</li>
+					<li>
+						<a href="#optional">
+							Elementos de fecho opcional
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#attributes">
+					Atributos
+				</a>
+				<ul class="page_sub_menu_1">
+					<li>
+						<a href="#attrib-cap">
+							Capitalização
+						</a>
+					</li>
+					<li>
+						<a href="#naming">
+							Nomeação de valores
+						</a>
+					</li>
+					<li>
+						<a href="#quotes">
+							Aspas e pelicas
+						</a>
+					</li>
+					<li>
+						<a href="#booleans">
+							Atributos booleanos
+						</a>
+					</li>
+					<li>
+						<a href="#order">
+							Ordem de atributos
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#divitis">
+					Divitis e classitis
+				</a>
+			</li>
+			<li>
+				<a href="#suma">
+					Em suma
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Fim de menu lateral -->
+
+	<main>
+		
+		<!-- Começo de cabeçalho -->
+		<div class="anchor" id="top"></div>
+		<h1 class="h1">
+			Tags, atributos e divs
+		</h1>
+		<!-- Fim de cabeçalho -->
+
+		<!-- Começo de introdução -->
+		<article>
+		<p>
+			As tags que compões os elementos HTML, assim como os atributos que os 
+			caraterizam, são a fundação para a escrita desta linguagem. 
+		</p>
+		<p>
+			Para facilitar a  compreenssão destes por membros de equipa ou aprendizados, 
+			devem-se tomar em conta algumas das convenções mais comuns, e outras opcionais.
+			Segue-se assim a listagem e caraterização das mesmas.
+		</p>
+		<p>
+			Nesta página inclui-se também uma nota acerca de divs, uma vez que estass são um
+			elemento particularmente importante na estruturação de quaqluer página web.
+		</p>
+	</article>
+		<!-- Fim de introdução -->
+		
+		<!-- Começo de tags -->
+		<article>
+			<div class="anchor" id="tags"></div>
+			<h2 class="h2">
+				Tags e elementos
+			</h2>
+			<!-- Começo de capitalização -->
+			<div class="anchor" id="tags-cap"></div>
+			<h3 class="h3">
+				Capitalização
+			</h3>
+			<p>
+				As tags dos elementos HTML devem ser escritas em letras minúsculas. 
+			</p>
+			<!-- Começo de mau exemplo de capitalização -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Mau exemplo de capitalização
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;Article&gt;
+  &lt;P&gt;
+  &lt;/p&gt;
+&lt;/ARTICLE&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo está errado por causa de alguns dos elementos terem letra 
+					capitalizadas.
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de capitalização -->
+			<!-- Começo de bom exemplo de capitalização -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Bom exemplo de capitalização
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;article&gt;
+  &lt;p&gt;
+  &lt;p&gt;
+&lt;article&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este examplo mostra a capitalização correta de tags e elementos HTML.
+				</p>
+			</div>
+			<!-- Fim de bom exemplo de capitalização -->
+			<!-- Fim de capitalização -->
+
+			<!-- Começo de espaçamento -->
+			<div class="anchor" id="spacing"></div>
+			<h3 class="h3">
+				Espaçamento
+			</h3>
+			<p>
+				Não devem haver espaços entre a abertura e fecho da tag e a identificação da
+				tag.
+			</p>
+			<!-- Começo de mau exemplo de espaçamento -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Mau exemplo de espaçamento
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt; article&gt;
+  &lt; p &gt;
+  &lt;/p &gt;
+&lt;/article&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo está errado devido aos espaços entre a abertura e fecho da tags 
+					&lt;article&gt; e &lt;p&gt;
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de espaçamento -->
+			<!-- Começo de bom exemplo de espaçamento -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Bom exemplo de espaçamento
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;article&gt;
+  &lt;p&gt;
+  &lt;p&gt;
+&lt;article&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo mostra o espaçamento correto de tags e elementos HTML.
+				</p>
+			</div>
+			<!-- Fim de bom exemplo de espaçamento -->
+			<!-- Fim de espaçamento -->
+
+			<!-- Começo de elementos vazios -->
+			<div class="anchor" id="empty"></div>
+			<h3 class="h3">
+				Elementos vazios
+			</h3>
+			<p>
+				Os elementos vazios podem ser escritos tanto com a terminação &gt;, mais comum 
+				em HTML, como com a terminação /&gt;, obrigatória em XHTML. 
+			</p>
+			<p>
+				Tendo em conta que HTML suporta ambas as opções, é essencialmente ao critério do
+				desenvolvedor. Contudo, sugerem-se as seguintes considerações.
+			</p>
+			<p>
+				Uma vez que HTML suporta ambas as opções, mas XHTML requer o uso obrigatório da
+				terminação /&gt;, o uso desta última poderá ser vantajosa para a hipótese de 
+				se fazer conversão para XHTML em algum ponto futuro.
+			</p>
+			<p>
+				O último ponto a ter em conta é manter a consistência, tanto para facilidade de
+				cooperação entre diferentes colaboradores, como para uma melhor organização.
+			</p>
+			<!-- Começo de mau exemplo de elementos vazios -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Mau exemplo de elementos vazios
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;p&gt;
+  Lorem ipsum dolor sit 
+  amet, &lt;br&gt; consectetur 
+  adipiscing elit, sed do &lt;br /&gt;
+  eiusmod tempor incididunt ut labore 
+  et &lt;br&gt; dolore magna aliqua. Ut 
+  enim ad minim veniam.
+&lt;/p&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo está errado porque não há consistência no fecho de elementos
+					vazios.
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de elementos vazios -->
+			<!-- Começo de bom exemplo de elementos vazios -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Mau exemplo de elementos vazios
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;p&gt;
+  Lorem ipsum dolor sit 
+  amet, &lt;br /&gt; consectetur  
+  adipiscing elit, sed do &lt;br /&gt;
+  eiusmod tempor incididunt ut labore 
+  et &lt;br /&gt; dolore magna aliqua. 
+  Ut enim ad minim veniam.
+&lt;/p&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo mostra uma possibilidade de consistência para elementos fechados.
+				</p>
+			</div>
+			<!-- Fim de bom exemplo de elementos vazios -->
+			<!-- Fim de elementos vazios -->
+
+			<!-- Começo de elementos de fecho opcional -->
+			<div class="anchor" id="optional"></div>
+			<h3 class="h3">
+				Elementos de fecho opcional
+			</h3>
+			<p>
+				À semelhança dos elementos vazios, o fecho de elementos opcionais está ao 
+				critério do desenvolvedor web. Pode-se não fechar para pessoas que não tenham 
+				dificuldade com a ausência dessas tags.
+			</p>
+			<p>
+				Contudo, estas são são requeridas ao invés de opcionais em XHTML, portanto caso
+				haja a possibilidade de o website vir a ser convertido para XHTML, será 
+				vantajoso manter as tags opcionais.
+			</p>
+			<!-- Fim de elementos de fecho opcional -->
+		</article>
+		<!-- Fim de tags -->
+
+		<!-- Começo de atributos -->
+		<article>
+			<div class="anchor" id="attributes"></div>
+			<h2 class="h2">
+				Atributos
+			</h2>
+			<!-- Começo de capitalização -->
+			<div class="anchor" id="attrib-cap"></div>
+			<h3 class="h3">
+				Capitalização
+			</h3>
+			<p>
+				Os atributos, assim como os seus valores, devem ser escritos em minúsculas.
+			</p>
+			<!-- Começo de mau examplo de capitalização -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Mau exemplo de capitalização
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;img src="iMg" class="Content" id="MAIN"&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo está errado por causa dos atributos terem letras capitalizadas.
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de capitalização -->
+			<!-- Começo de bom exemplo de capitalização -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Bom exemplo de capitalização
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;img src="img" class="content" id="main"&gt;
+					</pre>
+				</div>
+				<p class="exmaple_paragraph">
+					Este exemplo mostra a capitalização correta de atributos.
+				</p>
+			</div>
+			<!-- Fim de bom exemplo de capitalização -->
+		<!-- Fim de capitalização -->
+		
+		<!-- Começo de nomeação -->
+		<div class="anchor" id="naming"></div>
+			<h3 class="h3">
+				Nomeação de valores
+			</h3>
+			<p>
+				Se analisarmos os nomes multipalavra de alguns atributos, podemos ver que 
+				a separação é feita através de traços.
+			</p>
+			<p>
+				Tendo em conta a indicação anterior, para indicar diferentes palavras 
+				compositórias de um atributo, não se poderiam usar capitalizações. Assim, quando
+				a definir os valores de atributos como id, div e name, as opções restantes são 
+				espaços, traços (-) e underscores (_). 
+			</p>
+			<p>
+				Não é aconselhável incluir espaços porque esses valores seriam inválidos para
+				uso com CSS, uma vez que espaço não é um carater aí permitido.
+			</p>
+			<p>
+				O uso de underscores, embora não particularmente problemático, pode dificultar 
+				a leitura de quando o valor está sublinhado como ao ser uma âncora para 
+				hiperligação.
+			</p>
+			<p>
+				Assim, no geral, o mais aconselhável é usar traços (-) para separar palavras 
+				quando a escrever o valor de um atributo, por facilitar a leitura na situação 
+				supracitada e por ficar mais coerente com as atributos e valores já existentes.
+			</p>
+			<p>
+				Relativamente a traços e underscores, podem ser feitas exceções para convenções
+				CSS, como por exemplo BEM.
+			</p>
+			<p>
+				Finalmente, e logicamente, quando a definir os nomes para estes atributos, estes
+				devem ser tão semânticos quanto possível para facilitar a sua identificação. 
+				Outro pequeno aparte é o facto de ser relativamente importante evitar o uso de 
+				carateres únicos a uma língua (como por exemplo ç, à, etc) para evitar possíveis
+				confusões.
+			</p>
+			<!-- Começo de mau exemplo de nomeação -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Mau exemplo de nomeação
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;div class="mc 1"&gt;
+  &lt;h1 class="cabeçalho prin"&gt;
+  &lt;/h1&gt;
+&lt;/div&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo está errado porque a primeira classe tem um espaço, e a segunda
+					tem um "ç". O facto de as classes terem identificações tão crípticas pode 
+					também ser problemático.
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de nomeação -->
+			<!-- Começo de bom exemplo de nomeação -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Bom exemplo de nomeação
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;div class="main-content-1"&gt;
+  &lt;h1 class="main-header"&gt;
+  &lt;/h1&gt;
+&lt;/div&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo mostra uma possibilidade para nomeação correta de atributos. 
+					Nomes mais curtos, como no mau exemplo, podem ser aceitáveis havendo 
+					documentação apropriada.
+				</p>
+			</div>
+			<!-- Fim de bom exemplo de nomeação -->
+		<!-- Fim de nomeação -->
+		
+		<!-- Começo de aspas e pelicas -->
+		<div class="anchor" id="quotes"></div>
+			<h3 class="h3">
+				Aspas e pelicas
+			</h3>
+			<p>
+				Quando a escrever o valor de um atributo, este deve estar dentro de aspas.
+				Embora as pelicas sejam uma opção, estas costumam ser mais usadas em linguagens
+				de programação e gestão de base de dados, de modo que manter a consistência com 
+				aspas em HTML ajuda a separar as linguagens quando estas têm de ser conjugadas.
+			</p>
+			<!-- Começo de mau exemplo de aspas e pelicas -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Mau exemplo de aspas e pelicas
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;div class= test&gt;
+  &lt;div id='area-1'&gt;
+  &lt;/div&gt;
+  &lt; div id="area-2"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo está errado porque a classe test não será devidamente identificada 
+					por não ter começo e fim definido (com aspas), e o id area-1 está delineado com
+					pelicas em vez de aspas.
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de aspas e pelicas -->
+			<!-- Começo de bom exemplo de aspas e pelicas -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Bom exemplo de aspas e pelicas
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;div class="test"&gt;
+  &lt;div id="area-1"&gt;
+  &lt;/div&gt;
+  &lt; div id="area-2"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+					</pre>
+				</div>
+				<p div="example-paragraph">
+					Este exemplo mostra como o mau exemplo deveria estar aspado.
+				</p>
+			</div>
+			<!-- Fim de bom exemplo de aspas e pelicas -->
+		<!-- Fim de aspas e pelicas -->
+
+		<!-- Começo de atributos booleanos -->
+		<div class="anchor" id="booleans"></div>
+			<h3 class="h3">
+				Atributos boleanos
+			</h3>
+			<p>
+				Embora atributos booleanos possam ser escritos por completo, não é preciso para 
+				os definir, sendo a forma completa redundante.
+			</p>
+			<!-- Começo de mau exemplo de elementos boolenanos -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Mau exemplo de atributos booleanos
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;input type="checkbox" checked="checked" 
+name="cheese" disabled="disabled"&gt;
+					</pre>
+				</div>
+				<p example="example-paragraph">
+					Este exemplo está errado porque os atributos required e disabled podem ser
+					substituídos pelos seus valores.
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de atributos booleanos -->
+			<!-- Começo de bom exemplo de elementos boolenanos -->
+			<div class="small-example-2">
+				<h4 class="example-header">
+					Bom exemplo de atributos booleanos
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;input type="checkbox" checked 
+name="cheese" disabled&gt;
+					</pre>
+				</div>
+				<p example="example-paragraph">
+					Este exemplo demonstra a sumarização correta deste elemento.
+				</p>
+			</div>
+			<!-- Fim de bom exemplo de atributos booleanos -->
+		<!-- Fim de atributos booleanos -->
+
+		<!-- Ordem de atributos -->
+		<div class="anchor" id="order"></div>
+			<h3 class="h3">
+				Ordem de atributos
+			</h3>
+			<p>
+				Para facilitar a leitura de atributos, é importante seguir uma ordem dos mesmos.
+				Por exemplo, como as classes são facilmente reusadas dentro do mesmo documento,
+				é aconselhável estas surgirem antes dos id. Assim, de primeiro para último 
+				quando a ler a partir da esquerda:
+				<ul class="article-list">
+					<li>
+						src, for, type, href, value;
+					</li>
+					<li>
+						class;
+					</li>
+					<li>
+						id, name;
+					</li>
+					<li>
+						title, alt;
+					</li>
+					<li>
+						role, aria*;
+					</li>
+					<li>
+						data-*.
+					</li>
+				</ul>
+			</p>
+		<!-- Fim de ordem de atributos -->
+		<!-- Fim de atributos -->
+		</article>
+		<!-- Fim de atributos -->
+
+		<!-- Começo de divitis e classitis -->
+		<article>
+			<div class="anchor" id="divitis"></div>
+			<h2 class="h2">
+				Divitis e classitis
+			</h2>
+			<p>
+				Divitis consiste no uso excessivo de divs e classitis no uso excessivo de 
+				classes para "embrulhar" conteúdo para outros propósitos que não a divisão do 
+				conteúdo da página.
+			</p>
+			<p>
+				Embora isto resulte, pode resultar em código demasiado grande, lento e/ou 
+				consumidor de outros recursos que não seriam necessários.
+			</p>
+			<p>
+				Tendo em conta que o foco de HTML é ser uma linguagem de marcação estrutural, 
+				devemos fazer por o limitar o mais possível ao mínimo de elementos necessários 
+				ao colocar vários estilos num único elemento onde possível e usar os elementos 
+				estruturais e semânticos de html.
+			</p>
+			<!-- Começo de mau exemplo de divitis e classitis -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Exemplo de divitis e classitis
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;div class="right-arrow"&gt;&lt;/div&gt;
+&lt;div class="artigo"&gt;
+  &lt;div class="lista de frutas"&gt;
+    &lt;ul&gt;  
+      &lt;li&gt;
+        Maçã
+      &lt;/li&gt;
+      &lt;li&gt;
+        Banana
+      &lt;/li&gt;
+      &lt;li&gt;
+        Laranja
+      &lt;/li&gt;
+    &gt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Este exemplo está errado porque "right-arrow" pode ser dividido em arrow para 
+					ser reusado e right ser a classe que dá a rotação apropriada.
+				</p>
+				<p class="example-paragraph">
+					A div artigo pode ser substituída pelo elemento semântico article e a class 
+					"lista de frutas" pode ser colocada na ul, eliminando um div denecessária.
+				</p>
+			</div>
+			<!-- Fim de mau exemplo de divitis e classitis -->
+			<!-- Começo de bom exemplo de divitis e classitis -->
+			<div class="small-example-2">
+				<h4 class="example-paragraph">
+					Correção do exemplo  anterior
+				</h4>
+				<div class="small-example-content">
+					<pre>
+&lt;div class="right arrow"&gt;&lt;/div&gt;
+&lt;article&gt;
+  &lt;ul class="lista de frutas"&gt;  
+    &lt;li&gt;
+      Maçã
+    &lt;/li&gt;
+    &lt;li&gt;
+      Banana
+    &lt;/li&gt;
+    &lt;li&gt;
+      Laranja
+    &lt;/li&gt;
+  &gt;/ul&gt;
+&lt;/article&gt;
+					</pre>
+				</div>
+				<p class="example-paragraph">
+					Pode-se ver na div deste exempo que se podem aplicar várias classes a um
+					elemento ao separá-las com um espaço. conseguem-se assim misturar classes 
+					gerais com classes específicas, promovendo a reciclagem das primeiras.
+				</p>
+				<p>
+					Observa-se também o uso do elemento semântico article para melhor clareza,
+					assim também como a incluisão da class "lista de frutas" na ul, podendo assim 
+					omitir uma div extra.
+				</p>
+			</div>
+			<!-- Fim de bom exemplo de divitis e classitis -->
+		</article>
+		<!-- Fim de divitis e classitis -->
+
+		<!-- Começo de em suma -->
+		<article>
+			<div class="anchor" id="suma"></div>
+			<h3 class="h3">
+				Em suma
+			</h3>
+			<p class="summary_p">
+				Boa escrita de código HTML requer coerência na escrita dos diferentes elementos 
+				e atributos para facilitar a copreenssão do c+odigo. Nesta página foram abordados:
+				<ul class="summary_list">
+					<li>
+						Capitalização e espaçamento dentro das tags de elementos.
+					</li>
+					<li>
+						Elementos vazios.
+					</li>
+					<li>
+						Elementos de fecho opcional.
+					</li>
+					<li>
+						Capitalização de atributos e seus valores.
+					</li>
+					<li>
+						Considerações a ter na nomeação de valores.
+					</li>
+					<li>
+						Porque se devem usar aspas para cercar os valores.
+					</li>
+					<li>
+						Atributos booleanos.
+					</li>
+					<li>
+						Ordem de atributos.
+					</li>
+					<li>
+							O que é e como evitar uso excessivo de divs e classes.
+					</li>
+				</ul>
+			</p>
+	</article>
+		<!-- Fim de em suma -->
+	</main>
+</body>
+
+</html>

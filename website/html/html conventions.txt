@@ -1,0 +1,178 @@
+Document vs dom e outras coisas interessantes - https://en.wikipedia.org/wiki/HTML_element#Document_vs._DOM
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Elementos, tags e atributos
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Atributos	
+- Quando se escrevem nomes com várias palavras para classes ou ids, estes devem ser escritos sem espaço no meio, ou em kebabdcase, não em 	  snakecase. Actually, acaba por depender do eidtor de texto e preferência.
+- Os nomes de elementos, atributos e valores devem ser em letras minúsculas. Além de ser mais fácil, alguns servidores web são sensíveis 	 à capitalização. Os nomes de classe e IDs devem ser semânticos e separados por traços (exceção potencial para algumas convenções, como BEM). Não devem ser escritos em camelCase.
+- Não se devem omitir aspas ou usar pelicas, mas sim usar aspas para os valores de atributos. Isto facilita a leitura e a interpretação 	 	correta de descrições como as usadas no atributo alt;	
+- Para definir atributos booleanos, não é necessário escrevê-lo por completo (ex: required em vez de require="required"). Embora a última 	  opção funcione, não é necessária e é redundante.
+- Pode-se omitir o protocolo de elementos incorporados (retirar http: / https: dos links) exceto se os ficheiros nao estiverem 	  	  disponíveis através de ambos os protocolos. Isto torna a URL relativa e evita problemas de conteúdo misturado, além de marginalmente 	  	  reduzir o tamanho do ficheiro.
+- Para facilitar a legibilidade, os atributos devem seguir uma ordem específica:
+	- src, for, type, href, value ;
+	- class;
+	- id, name;
+	- title, alt;
+	- role, aria-*;
+	- data-*;
+Classes são componentes que podem ser facilmente reusados, portanto surgem primeiro. IDs são específicos e devem ser usados unicamente.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
+X - Deve-se evitar "divitis"/"classitis"
+- Consistem no usos desnecessário do elemento <div> e de classes CSS para outros propósitos além de dividir o conteúdo da página. Exemplos são:
+	- Wrapping (do inglês "embrulhar") elementos numa div para inserir classes e/ou atributos id para estilizar com CSS;
+	- Manipular a estrutura da página para conseguir objetivos visuais específicos;
+	- Usar <div> para marcar conteúdo que não parece coincidir com nenhum outro elemento HTML.
+Embora isto funcione, pode adicionar "bloat" (do inglês, "inchaço") ao código, isto é, o código ser desnecessariamente grande, lento, ou consumidor de outros recursos.
+HTML é uma linguagem de marcação estrutural. É suposta fornecer estrutura semântica (com significado) do documento na forma de cabeçalhos, listas, parágrafos, imagens, metainformação e outros. Para o aspeto visual, deve-se usar CSS, não HTML . 
+Assim, devemos limitar o HTML ao mnimo de lementos necessários, colocando vários estilos num único elemento onde possível. Em adição, devemos usar os elementos estruturais de HTML onde apropriado (ex: <header>, <article class="article-main">, <footer>...).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Imagens
+-------------------------------------------------------------------------------------------------------------------------------------------------
+- As imagens devem ser efetivamente guardadas para web (isto pode ser feito com programas como o photoshop). Caso contrário, podem adicioar até 28% de tempo extra de carregamento.
+- Se uma imagem tem valor informacional, deve ser parte da marcação e incluir um atributo alt. Este atributo é o que surge quando a imagem não carrega, ou é usado por leitores de texto para pessoas com limitações visuais. Assim, este valor deve ser muito descritivo do que a imagem contém. Para estas imagens, também é boa prática definir os atributos width e height inline para reservar espaço antes de carregar e evitar oscilação da mesma
+- Se uma imagem é puramente decorativa, O ideal é usar outro elemento que não o img para definir background-image em CSS. Contudo, Pode ser definida inline, mas com ARIA e atributos role apropriados para evitar informação desnecessária para leitores de texto. 
+
+Two Other Ways to Add Images to a Web Page
+HTML5 includes two new elements which can be used to add greater meaning to images and to give developers greater control over how visual elements are rendered different devices. These two elements are the picture and figure elements. These elements each have a specific purpose and aren’t intended to be used as a general-purpose replacement for the img tag. Instead, think of these two elements are special-case elements you can use in unique situations to add greater meaning to certain kinds of images.
+
+Picture Element
+The picture element is used to identify the version of a picture that should be used based on the results of a media query. It is particularly useful when there are specific reasons why a certain version of a picture should be used rather than another for a specific screen size. If all you’re trying to accomplish is to provide multiple image sizes for a variety of screen sizes and resolutions, the img tag and srcset attribute are a better option since they allow the browser to identify the best picture for the device. Use the picture element when the picture options available to the browser are not identical resized versions of each other and are different in some way. For example, if you have an image with a text overlay, when the image shrinks the text may need to increase in size relative to the image to remain readable on smaller screens. This is a great time to use the picture element so that you can explicitly tell the browser which image to use. On the other hand, if you just want to provide a smaller version of an image for use on smaller screens use the img tag and srcset attribute. Learn how to use srcset here. The picture element is not yet fully supported by all browsers. So if you use this new HTML5 element, be sure to provide an img fallback for visitors using unsupported browsers.
+
+Figure Element
+The figure element is an HTML5 feature used to identify an item on a web page that is relevant to the rest of the web page content, but does not depend on appearing in a specific position on the page. Content contained between figure tags should be able to be moved to a different position on the page without affecting it’s meaning or the meaning of the rest of the page content. The way the HTML specification puts it is that “the figure element represents a unit of content…that is self-contained”. Graphs, charts, and images are all common figure elements, but virtually any type of content, including videos, audio, and text can be nested between figure tags. The figcaption tag may optionally be added within the figure element to assign a caption to the content of the figure.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Formulários
+-------------------------------------------------------------------------------------------------------------------------------------------------
+https://code.tutsplus.com/tutorials/20-html-forms-best-practices-for-beginners--net-6593
+X - Forms
+- Os campos de um formulário devem incluir um elemento label, com um atributo for igual ao id do campo de entrada.
+Isto melhora a acessibilidade ao focar o campo a ser preenchido quando se clica na área, e ajuda leitores de ecrã a ligarem labes aos seus inputs respetivos.
+- Cada <input> deve ter um id único, seja este ou não igual ao atributo name.
+- Usar fieldsets para campos similares
+- Usar legendas nos fieldsets
+- Nomear os inputs para quando se passar informação para script
+- Usar optgroup para categorizar opções num campo select
+- 7 : Always assign complete attributes
+When working with forms particularly, it's tempting to write like this:
+
+<label for="live">Living?</label>
+<input name="live" id="live" type="checkbox" checked disabled />
+Yes, this does what it's supposed to do. No, you shouldn't code like this!
+It isn't standards-compliant. Whenever you are adding attributes to an element,
+don't cut corners.
+
+<label for="live">Living?</label>
+<input name="live" id="live" type="checkbox" checked="checked" disabled="disabled" />
+
+- 8 : Consider using Buttons instead of Submit Inputs
+Generally, <input type="submit" /> has been the universal submit
+button. But HTML has a <button> element. Why would you use it? Well, it's
+generally easier to style buttons; also, you can put images within a button,
+so it really offers more flexibility. You can read more in
+these
+two articles.
+- Usar tabindex
+- 11 : Use good focusing techniques
+You could argue that this point is as much on the side of design as it is accessibility.
+It's always nice if a form field (usually a text box, in this case) changes colour when it's focused, but for the visually
+impaired, it's almost a requirement if they are to use the form successfully.
+To this end, you can use the hover psuedoclass in your CSS; this will work in all
+common browsers except IE7 and down. You can also use JavaScript for this;
+jQuery has a hover
+event.
+
+input[type=text]:hover {
+        background-color:#ffff66;
+        border-color:#999999;
+}
+- 12 Consider people using Screen Readers
+Since forms have the tendency to be so tedious, everyone likes a well-designed form.
+But don't let a fancy form ignore screen readers: always make sure your inputs are
+clearly labeled. If you don't want those labels to show (maybe you are labeling text
+inputs with values that disappear on focus), you can remove them from the visual presentation
+(don't use display: none, though;
+there are better ways). Also, screen readers generally associate the text directly
+before an input to be the label for the input. The exceptions to this are radio
+buttons and checkboxes.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Otimização
+-------------------------------------------------------------------------------------------------------------------------------------------------
+- Minify and combine CSS and JS files.
+- COnsultar isto para elmentos semânticos: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+
+
+
+
+
+
+
+
+XX - Otimização
+- Efeitos negativos
+	- adding 10kb of extra HTML: +4.8%
+
+XX - W3 validator
+- É aconselhável verificar se o código HTMl/CSS é valido com o validador da organização w3: https://validator.w3.org/  .
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________
+
+
+Preocupar-me com isto quanto chegar a CSS
+1 - Formatação
+	- A identação deve ser de dois espaços ("soft tab");
+	- Não deve haver espaços a mais após o último caracter da linha (trailing whitespace);
+	- Devem-se usar aspas;
+	- Devem-se usar espaços (1 espaço) a seguir a : na declaração de propriedades;
+	- Devem-se usar espaços (1 espaço) antes de  { na declaração de diretivas;
+	- É preferível prioritizar códigos de cores em hex #000, exceto quando a usar rgba();
+	- Devem-se fornecer alternativas de recurso para navegadores mais antigos;
+	- Deve-se usar uma linha por cada propriedade declarada;
+	- Deve-se separar cada diretiva ( O que fica dentro de chavetas {} ) com uma linha de espaço;
+
+
+
+
+
+
+https://medium.com/@luqman.qureshi/think-twice-code-once-c49faa8cd18
+- Block Element Modifier (BEM)
+	- Complicado. Pesquisar junto com OOCSS, SMACSS, SUITCSS e Atomic Quando começar a rever CSS .
+- Pensar em CSS como objetos
+- Parent child relationship
+- Subclassing objects
+- Using modifiers
+- Selector depth
+- Keep Your Sass Rules in Order
+	- Pesquisar (aprender?) SASS . 
+
+Otimização
+- Efeitos negativos
+	- using @import to call one half of a stylesheet into the other half: +7.6%
+	- using inefficient CSS selectors: +8.5%
+	- Sass created clutter : +16.77%
+
+
+
+
+
+
+
+
+Referências bibliográficas
+- https://mamta-thakur.medium.com/html5-coding-conventions-148bf014cf58		;
+- https://en.wikipedia.org/wiki/Code_bloat		;
+- https://medium.com/@luqman.qureshi/think-twice-code-once-c49faa8cd18		;
+- https://developers.google.com/style/html-formatting		;
+- https://www.webtrickshome.com/content/html-coding-conventions		;
+- https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/HTML		;
+- https://docs.ckan.org/en/2.9/contributing/html.html		;
+- https://data-flair.training/blogs/html-style-guide/		;
+- https://google.github.io/styleguide/htmlcssguide.html		;
+- https://www.oreilly.com/content/little-book-html-css-coding-guidelines/		;

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Estrutura base de HTML
+	</title>
+	<link rel="stylesheet" href="2-estilos/styles.css">
+</head>
+
+<body>
+
+	<!-- Menu principal -->
+	<nav class="main_menu">
+		<ul>
+			<li>
+				<a id="html_link" href="#">
+					HTML
+				</a>
+			</li>
+			<li>
+				<a id="css_link" href="#">
+					CSS
+				</a>
+			</li>
+			<li>
+				<a id="javascript_link" href="#">
+					Javascript
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Fim de menu principal -->
+
+	<!-- Menu lateral -->
+	<nav id="page_menu">
+		<ul>
+			<li>
+				<a href="#top">
+					Topo da página
+				</a>
+			</li>
+			<li>
+				<a href="#doctype">
+					&lt;DOCTYPE html&gt;
+				</a>
+			</li>
+			<li>
+				<a href="#html">
+					&lt;html&gt;
+				</a>
+			</li>
+			<li>
+				<a href="#head">
+					&lt;head&gt;
+				</a>
+			</li>
+			<li>
+				<a href="#body">
+					&lt;body&gt;
+				</a>
+			</li>
+			<li>
+				<a href="#suma">
+					Em suma
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Fim do Menu lateral -->
+
+	<main>
+		<div class="" id=""></div>
+		<!-- Introdução -->
+		<h1>
+			Elementos base de uma estrutura html
+		</h1>
+		<p>
+			Independentemente dos conhecimentos que uma pessoa possa ter, qualquer ser humano é falível, e quanto mais
+			acreditamos que dominamos os básicos, mais arriscamos a esquecermo-nos de algum detalhe destes.
+		</p>
+		<p>
+			Como tal, esta página é um mero lembrete dos elementos HTML imprescindíveis para o devido funcionamento de uma
+			página web. Outros pormenores para uma estrutura mais geral, assim como formatação de elementos e outros é
+			explicado <a href="#">nesta</a> página.
+		</p>
+		<!-- Fim de introdução -->
+
+		<div class="" id=""></div>
+		<!-- !DOCTYPE -->
+		<article class="article-main">
+			<h2 class="h2">
+				&lt;!DOCTYPE html&gt;
+			</h2>
+			<p>
+				Apesar da semelhança de &lt;!DOCTYPE html&gt; com outros elementos HTML, isto não é um elemento HTMl, mas antes
+				uma informação passada ao navegador acerca de que tipo de ficheiro este é, assim como a sua versão, de modo a
+				que qualquer navegador saiba que tipo de documento deve renderizar e usar os recursos apropriados a esse
+				documento. Como tal, este deve surgir antes de qualquer elemento HTML, sendo normalmente a primeira linha do
+				documento.
+			</p>
+			<p>
+				À semelhança de qualquer elemento HTML, esta instrução não tem sensibilidade à capitalização usada no elemento,
+				de moco que qualquer uma é devidamente processada pelos navegadores web. Contudo, o padrão mais comummente usado
+				é &lt;!DOCTYPE html&gt;.
+			</p>
+			<p>
+				Existem várias versões desta diretiva, mas para HTML 5 basta limitarmo-nos a &lt;!DOCTYPE html&gt;. Para versões
+				anteriores de HTML ou diferentes versões de XHTML, pode-se consulta <a href="#">esta</a> página, onde se procura
+				explicar todos os detalhes desta diretiva.
+			</p>
+
+			<!-- Exemplo de DOCTYPE -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Exemplo de DOCTYPE
+				</h4>
+				<div class="small-example-content">
+<pre>
+&lt;DOCTYPE html&gt;
+</pre>
+				</div>
+			</div>
+			<!-- Fim de exemplo de doctype -->
+		</article>
+		<!-- Fim de DOCTYPE -->
+
+		<div class="" id=""></div>
+		<!-- html -->
+		<article class="article-main">
+			<h2 class="h2">
+				&lt;html&gt;
+			</h2>
+			<p>
+				Este deve ser o primeiro elemento HTML propriamente dito, a englobar todos os outros elementos.
+			</p>
+			<p>
+				O elemento HTML deve ser seguido de um elemento &lt;head&gt;, seguido por um elemento &lt;body&gt;
+			</p>
+			<p>
+				Dos atributos que podem ser incluídos neste elemento, No mínimo dos mínimos, é altamente aconselhável usar o
+				atributo lang para especificar a linguagem do documento em questão, que ajuda com SEO e com conteúdo localizado.
+				Outros atributos são referidos e explicados <a href="#">aqui</a>.
+			</p>
+
+			<!-- Exemplo de html -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					&lt;html&gt;
+				</h4>
+				<div class="small-example-content">
+<pre>
+&lt;html lang="pt"&gt;
+</pre>
+				</div>
+			</div>
+			<!-- Fim de exemplo de HTML-->
+		</article>
+		<!-- Fim de html-->
+
+		<div class="" id=""></div>
+		<!-- head -->
+		<article class="article-main">
+			<h2 class="h2">
+				&lt;head&gt;
+			</h2>
+			<p>
+				Inclui a metainformação (informação acerca de informação) da página.
+			</p>
+			<p>
+				De entre os vários elementos e atributos que podem ser incorporados, o mínimo aconselhável é a metainformação
+				para a codificação de caracteres, responsividade da página e compatibilidade para versões anteriores do internet
+				explorer, caso se queira dar compatibilidade a essas.
+			</p>
+			<p>
+				Em termos de elementos, devem ser ao menos incluídos &lt;title&gt;&lt;link&gt; para incluir ficheiros
+				necessários, assim como &lt;script&gt; para a inclusão de código. Este ponto pode lentificar o carregamento da
+				página, de modo que pode ser preferível colocar no fim do documento.
+			</p>
+			<p>
+				Podem-se ver os vários atributos e elementos adicionais que podem ser incluídos <a href="#">aqui</a>;
+			</p>
+
+			<!-- Exemplo de head -->
+			<div class="big_example">
+				<h4 class="example-header">
+					Exemplo de um &lt;head&gt;
+				</h4>
+				<div class="big_example_content">
+<pre>
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;
+    Exemplo de Head
+  &lt;/title&gt;
+  &lt;link rel="stylesheet" href="estilos/estilos.css"&gt;
+  &lt;script src="scripts/test.js"&gt;
+  &lt;/script&gt;
+&lt;/head&gt;
+</pre>
+				</div>
+			</div>
+			<!-- Fim de exemplo de head -->
+		</article>
+		<!-- Fim de head -->
+
+		<div class="" id=""></div>
+		<!-- Body -->
+		<article class="article-main">
+			<h2 class="h2">
+				&lt;body&gt;
+			</h2>
+			<p>
+				Não há muito a dizer. É aqui que se insere o conteúdo visto pelo utilizador e todos os outros elementos HTML.
+				Embora tenha alguns atributos específicos que podem ser vistos <a href="#">aqui</a>, não existe nenhum atributo
+				obrigatório.
+			</p>
+			<!-- Exemplo de body -->
+			<div class="small-example-1">
+				<h4 class="example-header">
+					Exemplo de um &lt;body&gt;
+				</h4>
+				<div class="small-example-content">
+<pre>
+&lt;body&gt;
+  &lt;h1&gt;
+    Título
+  &lt;/h1&gt;
+  &lt;p&gt;
+    Algum texto
+  &lt;/p&gt;
+&lt;/body&gt;
+</pre>
+				</div>
+			</div>
+			<!-- Fim de exemplo de body -->
+		</article>
+		<!-- Fim de body -->
+
+		<div class="" id=""></div>
+		<!-- Em suma -->
+		<article class="article-main">
+			<h2 class="h2">
+				Em suma
+			</h2>
+			<p>
+			Devem-se incluir sempre as tags e os elementos &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt; 
+			e &lt;body&gt; para o tipo de documento ser reconhecido pelo navegador e devidamente estruturado.
+			</p>
+			</p>
+		</article>
+		<!-- Fim de em suma -->
+
+	</main>
+</body>
+
+</html>

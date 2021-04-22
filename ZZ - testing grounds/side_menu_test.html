@@ -1,0 +1,222 @@
+<!DOCTYPE html> <!-- Indica ao navegador que tipo de documento deve abrir e que resucrsos usar -->
+<html lang="pt"> <!-- Indica o começo do documento. Atributo lang determina a língua do documento -->
+
+<head> <!-- Parte do documento para inclusão de metada e ligações a outros ficheiros -->
+	<meta charset="utf-8"> <!-- Codificação dos carateres da página -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Conteúdo responsivo ao tamanho do ecrã -->
+	<title> <!-- Título da página que aparece no separador aberto no navegador -->
+		Side menu test
+	</title>
+	<link rel="stylesheet" href="css/General styles.css"> <!-- Ligação à folha de estilos CSS -->
+</head>
+
+<body> <!-- Área onde aparece o conteúdo do documento -->
+
+	<!-- Main menu -->
+	<nav id="main_menu"> 
+		<!-- 
+				Elemento semântico: área de navegação.
+				id ajuda a identificar elementos para caraterizar com css. Cada id deve ter um valor único ao documento.
+				Caso se queira usar o mesmo valor para identificar elementos diferentes, deve-se usar o atributo class em vez
+			de id.
+		-->
+		<ul> <!-- Lista não ordenada. Standard para criar menus -->
+			<li> <!-- Elemento de uma lista -->
+				<a href="#"> <!-- Elemento de hiperligação. A página alvo indica-se como valor do atributo href -->
+					Link 1
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Link 2
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Link 3
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Link 4
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Side menu (for page contents) -->
+	<nav id="page_menu">
+		<ul>
+			<li>
+				<a href="#">
+					Link 1
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Link 2
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Link 3
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Can this be seen?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					What about this?
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+
+
+
+	<main> 
+		<!-- 
+				Elemento semântico. Indica a zona principal de conteúdo, que deve ser único ao documento. 
+			Só pode existir um por documento 
+		-->
+		<!-- Título -->
+		<h1> <!-- Um dos cabeçalhos. H1 é o maior, até h6 que é o menor -->
+			HTML Introduction
+		</h1>
+
+		<article> 
+			<!-- 
+					Elemento semântico. Indica conteúdo independente. Bom para juntar informação relacionada em blocos
+			-->
+			<!-- Conceito -->
+			<h2>
+				Conceito
+			</h2>
+			<p> <!-- Parágrafo. O conteúdo ocupa a altura necessária e toda a largura disponível. -->
+				HTML significa HyperText Markup Language, ou linguagem de marcação de hiper texto. Descreve a estrutura que uma
+				página web deve ter, sendo esta informação interpretada pelo navegador em uso pelo utilizador.
+			</p>
+			<p>
+				Caso tenha interesse, pode ler as explicação detalhada para a dissecação dos conceitos de linguagem de marcação
+				e
+				de hipertexto ou pode avançar para os básicos de HTML.
+			</p>
+		</article>
+
+		<article>
+			<!-- Explicação detalhada -->
+			<h2>
+				Explicação detalhada
+			</h2>
+			<!-- Linguagemd e marcação -->
+			<h3>
+				Linguagem de marcação
+			</h3>
+			<p>
+				Em manuscrita, linguagem de marcação consiste num sistema de anotação de um texto para que este seja
+				sintaticamente distinguível, tendo esta ideia surgido das marcações feitas por revisores de manuscritos,
+				normalmente com uma caneta de cor diferente. O objetivo é que o conteúdo destas marcações seja de alguma maneira
+				aplicado para alterar o conteúdo do texto em si, sem estas marcações serem vistas pelo leitor final.
+				Em Informática, linguagem de marcação é um conjunto de códigos aplicados a um texto ou a dados, com o fim de lhe
+				adicionar informações particulares.
+			</p>
+			<!-- Hipertexto -->
+			<h3>
+				Hipertexto
+			</h3>
+			<p>
+				O hipertexto tem as suas origens nós secúlos XVI e XVII, mas é mais simples compreender com os exemplos da
+				internet com que estamos tão familiarizados atualmente.
+			</p>
+			<p>
+				Em suma, hipertexto é normalmente composto por texto, mas pode consistir em outros elementos visuais, como
+				imagens, que têm uma ligação que nos redireciona para outro conteúdo após clicar.
+				<br /> 
+				<!-- 
+						Usado para criar quebras de linha, neste exemplo, dentro de um parágrafo.
+						Pode-se escrever <br> ou <br />, mas o que interessa é não misturar estas duas formas para clareza.
+					-->
+				São mais comummente denominados por hiperligações, ou do inglês, <i>links</i>.
+			</p>
+		</article>
+
+		<article>
+			<h2>
+				Em suma
+			</h2>
+			<p>
+				Assim, pode-se entender HTML como a linguagem interpretada pelos diferentes navegadores web para estruturar uma
+				página e apresentar o conteúdo a não ser interpretado ao utilizador, incluindo, mas não limitado, a
+				hiperligações.
+			</p>
+		</article>
+		
+		<article>
+			<h3>
+				Iframe test
+			</h3>
+			<iframe src="try_it_yourself.html"></iframe>
+		</article>
+
+
+
+
+	</main>
+
+</body>
+
+</html>

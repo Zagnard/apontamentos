@@ -1,0 +1,23 @@
+Consultar html nos seguintes sites:
+- https://www.tutorialrepublic.com/html-tutorial/html-elements.php		;
+- https://data-flair.training/blogs/html-style-guide/;
+
+Adicionar ligações no documento parte-x2-html-convencoes-1-estrutura-base:
+- Página acerca de estrutura geral e formtação.
+- Página acerca de <!DOCTYPE html>;
+- Ligar a página de atributos html;
+- Ligar a página de atributos e elementos head
+
+
+pre and code
+fazer um css básico 
+
+Consultar https://www.oreilly.com/content/little-book-html-css-coding-guidelines/   para CSS
+
+Investigar XHTML
+- https://www.webtrickshome.com/content/html-coding-conventions		;
+Investigar BEM, OOCSS, SMACSS, SUITCSS e Atomic Quando começar a rever CSS .
+
+Investigar AJAX quando estiver a estuadr javascript
+
+Refazer o website com os conhecimentos adquiridos

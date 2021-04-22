@@ -1,0 +1,156 @@
+/*
+------------------
+| Elementos HTML |
+------------------
+*/
+
+body {
+	min-height: 100%;
+	font-size: 2.5vh;
+}
+
+html {
+	height: 100%;
+	overflow-y: show;
+}
+
+h1 {
+	width: 100%;
+	height: auto;
+	border: 1px solid #ffffff;
+	text-align: center;
+	background-color: #00AB0C;
+	margin: 0%;
+	padding: 1%;
+}
+
+h2 {
+	width: 83.5%;
+	height: auto;
+	border: 1px solid #ffffff;
+	background-color: #00AB0C;
+	margin: 0%;
+	padding: 1%;
+}
+
+h3 {
+	width: 77%;
+	height: auto;
+	border: 1px solid #ffffff;
+	background-color: #00AB0C;
+	margin: 0%;
+	padding: 1%;
+}
+
+h4 {
+	width: 55%;
+	height: auto;
+	border: 1px solid #ffffff;
+	background-color: #00AB0C;
+	margin: 0%;
+	padding: 1%;
+}
+
+h5 {
+	width: 39.5%;
+	height: auto;
+	border: 1px solid #ffffff;
+	background-color: #00AB0C;
+	margin: 0%;
+	padding: 1%;
+}
+
+h6 {
+	width: 33%;
+	height: auto;
+	border: 1px solid #ffffff;
+	background-color: #00AB0C;
+	margin: 0%;
+	padding: 1%;
+}
+
+p {
+	width: 100%;
+	height: auto;
+	margin: 0%;
+	padding: 0% 1% 1% 0%;
+	text-indent: 4vh;
+}
+
+/* Main menu */
+#main_menu {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 5%;
+	padding: 0.4% 1% 1.8% 1%;
+	margin: 0% 0% 0% -1%;
+	background-color: #00AB0C;
+}
+
+#main_menu > ul {
+	padding: 0% 0% 0% 0%;
+	vertical-align: center;
+}
+#main_menu > ul > li {
+	display: inline;
+}
+
+#main_menu > ul > li > a {
+	padding: 1% 1% 1% 1%;
+	text-decoration: none;
+	font-size: 12pt;
+}
+
+#page_menu {
+	margin: 5.9% 0px 0px 0px;
+	min-height: auto;
+	max-height: 80%; /* Full height. Remove this for "auto" height  */
+	width: 200px; /* The width of the side bar */
+	position: fixed; /* Fixed sidebar (stay in place on scroll) */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0; /* Stay at the right */
+	background-color: #00AB0C; /* black */
+	overflow-x: hidden; /* Disable horizontal scroll */
+	overflow-y: show;
+}
+
+#page_menu > ul {
+	list-style-type: none;
+	margin-left: -10%;
+}
+
+/* Navigation menu links */
+#page_menu > ul > li > a{
+	padding: 1% 2% 3% 2%;
+	text-decoration: none;
+	font-size: 12pt;
+	display: block;
+}
+
+/* Change link color on hover */
+#page_menu > a:hover {
+	color: #f1f1f1;
+}
+
+/*
+---------------------
+| Conteúdo da página|
+---------------------
+*/
+
+/* Zona de conteúdo no geral */
+main {
+	margin: 5% 0% 0% 15%;
+	padding: 1% 2% 1% 2%;
+	left: 0;
+}
+
+/* Blocos de conteúdo */
+article {
+	width: auto;
+	height: auto;
+	padding: 2% 4% 2% 2%;
+	margin: 2% -2% 0% 0%;
+}

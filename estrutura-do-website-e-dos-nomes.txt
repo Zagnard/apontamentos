@@ -1,0 +1,29 @@
+Estrutura do website:
+site (root)
+	html
+		pasta(s) de imagens
+		pasta(s) de css
+		pasta(s) de scripts
+		pasta(s) de exemplos
+		ficheiros acercade de html
+	css
+		pasta(s) de imagens
+		pasta(s) de css
+		pasta(s) de scripts
+		pasta(s) de exemplos
+		ficheiros acercade de css
+	javascript
+		pasta(s) de imagens
+		pasta(s) de css
+		pasta(s) de scripts
+		pasta(s) de exemplos
+		ficheiros acercade de javascript
+	...
+
+Estrutura dos nomes dos ficheiros dentro das subpastas
+- parte + número de parte + tema/linguagem + subtema + número da parte do subtema (se necessário) + nome específico , por exemplo:
+- parte + 5 + html + tutorial + 5 + imagens -> parte-1-html-tutorial-imagens
+
+Estrutura dos nomes dos exemplos
+- ex + número (ordem em que foi criado e incluído no website) + tema/linguagem + número da parte do subtema (se necessário) + nome específico + nome do exemplo, por exemplo: 
+- ex + 1 + convenções + nomes de ficheiros + space string break -> ex-1-convencoes-nomes-de-ficheiros-space-string-break 

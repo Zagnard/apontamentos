@@ -1,0 +1,290 @@
+/*
+------------------
+| Elementos HTML |
+------------------
+*/
+
+body {
+	min-height: 100%; 
+	font-size: 2.5vh;
+	margin: 0%;
+}
+
+main {
+	margin: 5% 0% 0% 15%;
+	padding: 1% 2% 1% 2%;
+	left: 0;
+}
+
+article {
+	width: auto;
+	height: auto;
+	padding: 2% 4% 2% 2%;
+	margin: 2% -2% 0% 0%;
+	clear: both;
+}
+
+.h1 {
+	width: 100%; 
+	height: auto; 
+	border: 1px solid #FFFFFF;
+	text-align: center; 
+	background-color: #bAA1A7; 
+	margin: 0%;
+	padding: 1%;
+}
+
+.h2 {
+	width: 83.5%;
+	height: auto;
+	border: 1px solid white;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+}
+
+.h3 {
+	width: 77%;
+	height: auto;
+	border: 1px solid white;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+	clear: both;
+}
+
+.h4 {
+	width: 55%;
+	height: auto;
+	border: 1px solid white;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+}
+
+.h5 {
+	width: 39.5%;
+	height: auto;
+	border: 1px solid #797b84;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+}
+
+.h6 {
+	width: 33%;
+	height: auto;
+	border: 1px solid #797b84;
+	background-color: #bAA1A7;
+	margin: 0%;
+	padding: 1%;
+}
+
+p {
+	width: 100%;
+	height: auto;
+	margin: 0%;
+	padding: 0% 1% 1% 0%;
+	text-indent: 4vh;
+	display: block;
+}
+
+pre {
+	padding: 0%;
+	margin: 0%;
+}
+
+iframe {
+	width: 100%;
+	height: 50vh;
+	border: 5px solid purple;
+	margin: 1% 0% 0% 0%;
+}
+
+/*
+-------------
+| Main menu |
+-------------
+*/
+
+.main_menu {
+	position: fixed; 
+	top: 0; 
+	width: 100%; 
+	height: 5vh;
+	padding: 0.4% 1% 1.8% 1%;
+	background-color: #EDD2E0;
+}
+
+.main_menu > ul {
+	padding: 0% 0% 0% 0%;
+	vertical-align: center;
+}
+.main_menu > ul > li {
+	display: inline; 
+}
+
+.main_menu > ul > li > a {
+	padding: 1% 1% 1% 1%;
+	text-decoration: none; 
+	font-size: 12pt;
+	color: #797b84; 
+}
+
+.main_menu > ul > li > a:hover {
+	color: #DBABBE;
+}
+
+
+/*
+-------------
+| Side menu |
+-------------
+*/
+
+#page_menu {
+	margin: 32.5vh 0px 0px 0px;
+	height: 40vh; 
+	width: 31vh; 
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	background-color: #EDD2E0; 
+	overflow-x: hidden; 
+	overflow-y: show; 
+}
+
+
+
+#page_menu > ul, 
+#page_menu > ul > li > ul {
+	list-style-type: none; 
+	margin-left: -10%;
+}
+
+#page_menu > ul > li > a,
+#page_menu > ul > li > .page_sub_menu_1 > li > a {
+	padding: 1% 2% 3% 2%;
+	text-decoration: none;
+	font-size: 12pt;
+	display: block;
+	color: #797b84;
+}
+
+#page_menu > ul >li > a:hover,
+#page_menu > ul > li > .page_sub_menu_1 > li > a:hover {
+	color: #DBABBE;
+}
+
+/* offsets de âncoras */
+.anchor {
+	visibility: hidden;
+	top: -12vh;
+	display: block;
+	position: relative;
+	clear: both;
+}
+
+/*
+---------------------
+| Conteúdo da página|
+---------------------
+*/
+
+/* Listas de menus */
+.article-list {
+	margin: 0%;
+	padding: 0% 0% 0% 1.5%;
+}
+
+/* exemplos curtos */
+.small-example-1 {
+	width: 40%;
+	height: auto;
+	border: 4px solid #BAA1A7;
+	border-radius: 8px;
+	padding: 2%;
+	float: left;
+	margin: 0% 2.5% 1.5% 2.5%;
+	clear: left;
+	background-color: #D3D3D3;
+}
+
+.small-example-2 {
+	width: 40%;
+	height: auto;
+	border: 4px solid #BAA1A7;
+	border-radius: 8px;
+	padding: 2%;
+	float: right;
+	margin: 0% 2.5% 1.5% 2.5%;
+	background-color: #D3D3D3;
+}
+
+.small_example_3 {
+	width: 60%;
+	height: auto;
+	border: 4px solid #BAA1A7;
+	border-radius: 8px;
+	padding: 2%;
+	margin: 0% 0% 1.5% 0%;
+	clear: left;
+	background-color: #D3D3D3;
+}
+
+.small-example-content {
+	width: auto;
+	height: auto;
+	border: 2px solid #BAA1A7;
+	background-color: #FFFFFF;
+	padding: 1%;
+}
+
+.small_example_image {
+	max-width: 70%;
+	max-height: 70%;
+}
+
+/* Exemplos grandes */
+.big_example {
+	width: 90%;
+	height: auto;
+	border: 4px solid #BAA1A7;
+	border-radius: 8px;
+	padding: 2%;
+	margin: 0% auto 1.5% auto;
+	clear: both;
+	background-color: #D3D3D3;
+}
+
+.big_example_content {
+	width: 98%;
+	height: auto;
+	border: 2px solid #BAA1A7;
+	background-color: #FFFFFF;
+	padding: 1%;
+}
+
+.big_example_image {
+	max-width: 70%;
+	max-height: 70%;
+}
+
+.example-header {
+	margin: 0% 0% 0.5% 0%;
+}
+
+.example-paragraph {
+	margin: 2% 0% 0% 0%;
+	text-indent: 0vh;
+}
+
+/* Em suma */
+.summary_p {
+	margin: 0% 0% 0% 0%; 
+}
+
+.summary_list {
+	margin: 0% 0% 0% 0%; 
+}
+
